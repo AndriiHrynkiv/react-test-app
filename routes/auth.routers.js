@@ -1,6 +1,7 @@
 const Routers = require('express');
 const {check, validationResult} = require('express-validator');
 const jwt = require('jsonwebtoken');
+const config = require('config');
 const User = require('../models/User');
 const router = Routers();
 
@@ -72,6 +73,13 @@ router.get (
                 return res.status(400).json({message: 'incorrect password'})
             }
 
+            const token = jwt.sign(
+                {userId: user.Id},
+                configs.get("jwtSecret"),
+                {expiresIn: '1h'}
+            )
+
+            res.json({ token, userId: user.Id})
     
         } catch (e) {
             res.status(500).json({message: 'sever error'})
