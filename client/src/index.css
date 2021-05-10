@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* loggin */
+.loggin {
+  margin: auto;
+  margin-top: 50px;
+  width: 20%;
+  border: 1px solid gray;
+}
+
+.loggin_title {
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loggin_inputs input {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.loggin_btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.loggin_btn {
+  margin: 0 10px;
+}
+
+

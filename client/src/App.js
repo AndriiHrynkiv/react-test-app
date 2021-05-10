@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import {Routes} from './routes';
+import {UseRoutes} from './routes';
 import {BrowserRouter} from 'react-router-dom';
 
 function App() {
-  const routes = Routes(false);
+  const routes = UseRoutes(false);
   return (
     <BrowserRouter>
-        {routes}
+      {routes}
    </BrowserRouter>
   )
 }
