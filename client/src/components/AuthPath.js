@@ -9,6 +9,8 @@ export const AuthPageComponent = () => {
         password:""
     })
 
+
+
     const updateFromHendles = event => {
         setFrom ({...form, [event.target.name]: event.target.value})
         setFrom ({...form, [event.target.name]: event.target.value})
@@ -16,8 +18,6 @@ export const AuthPageComponent = () => {
 
     const userRegistration = async () => {
         const data = await request('/api/auth/register', 'POST', {...form})
-        console.log(data);
-
     }
 
     return (

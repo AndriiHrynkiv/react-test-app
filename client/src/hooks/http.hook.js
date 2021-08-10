@@ -8,7 +8,7 @@ export const Http = () => {
         setLoading(true);
         try {
             const response  = await fetch(url, {method, body, headers})
-            const data = await data.json();
+            const data = await response.json();
             setLoading(false);
 
             if (!data.ok) {
